@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libros_maestro", "Libros_maestro\Libros_maestro.csproj", "{FE88904B-D045-42A5-BB80-F1614A61573B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE88904B-D045-42A5-BB80-F1614A61573B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE88904B-D045-42A5-BB80-F1614A61573B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE88904B-D045-42A5-BB80-F1614A61573B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE88904B-D045-42A5-BB80-F1614A61573B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {461A67E3-FB25-44A5-BF8E-8343DBA66ECB}
+	EndGlobalSection
+EndGlobal

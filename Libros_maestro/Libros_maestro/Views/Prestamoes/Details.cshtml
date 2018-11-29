@@ -1,0 +1,66 @@
+﻿@model Libros_maestro.Models.Prestamo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_prestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_prestamo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_devolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_devolucion)
+        </dd>
+
+    </dl>
+</div>
+
+
+
+<h4>Detalles del prestamo</h4>
+<div id="resultado">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        var id = 0;
+        // Obtenemos todos los valores contenidos en los <td> de la fila
+        // seleccionada
+        id =@Model.id_prestamo;
+
+        $.ajax({
+            url: "/Prestamoes/detallesPrestamo",
+            method: "Get",
+            data: { id: id },
+            success: function (data) {
+                $("#resultado").html(data);
+            },
+            error: function () {
+                $("#resultado").html("<h3>Error al cargar</h3>");
+            }
+        });
+
+    });
+</script>
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_prestamo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

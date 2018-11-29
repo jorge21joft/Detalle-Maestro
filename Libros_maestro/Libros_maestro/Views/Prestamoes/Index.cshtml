@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Libros_maestro.Models.Prestamo>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           ID
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_prestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_devolucion)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_prestamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_prestamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_devolucion)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id_prestamo }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id_prestamo }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id_prestamo })
+        </td>
+    </tr>
+}
+
+</table>

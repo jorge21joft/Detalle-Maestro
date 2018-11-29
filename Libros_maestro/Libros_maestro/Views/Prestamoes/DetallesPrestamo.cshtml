@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Libros_maestro.Models.DetallePrestamo>
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Libros.titulo)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Libros.genero)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Libros.titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Libros.genero)
+            </td>
+        </tr>
+    }

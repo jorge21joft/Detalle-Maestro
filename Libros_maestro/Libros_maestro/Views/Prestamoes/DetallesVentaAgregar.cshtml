@@ -1,0 +1,35 @@
+﻿
+@using Libros_maestro.Models;
+@{
+    IEnumerable<Libros_maestro.Models.DetallePrestamo> l = new List<Libros_maestro.Models.DetallePrestamo>();
+
+    if (ViewBag.listaDetalles != null)
+    {
+        l = ViewBag.listaDetalles;
+    }
+
+}
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>cantidad</th>
+            <th>libro</th>
+            <th>genero</th>
+        </tr>
+    </thead>
+    <tbody id="mostrar">
+        @foreach (var i in l)
+        {
+        <tr>
+            <td>@i.cantidad</td>
+            <td>@i.Libros.titulo</td>
+            <td>@i.Libros.genero</td>
+        </tr>
+        }
+
+    </tbody>
+
+</table>
